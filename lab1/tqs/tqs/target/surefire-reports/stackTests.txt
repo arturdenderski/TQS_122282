@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: stackTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.052 s <<< FAILURE! -- in stackTests
+stackTests.multipleStackPops -- Time elapsed: 0.005 s <<< ERROR!
+java.util.NoSuchElementException
+	at java.base/java.util.LinkedList.removeFirst(LinkedList.java:274)
+	at java.base/java.util.LinkedList.pop(LinkedList.java:805)
+	at org.example.TqsStack.pop(TqsStack.java:18)
+	at stackTests.multipleStackPops(stackTests.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
