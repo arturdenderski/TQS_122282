@@ -1,0 +1,4 @@
+tqs/geocoding/AddressResolverService.class
+tqs/geocoding/TqsBasicHttpClient.class
+tqs/geocoding/ISimpleHttpClient.class
+tqs/geocoding/Address.class
