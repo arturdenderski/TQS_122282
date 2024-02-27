@@ -15,10 +15,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 class StocksPortfolioTest {
 
-    private IStockmarketService stockmarket;
+    private static IStockmarketService stockmarket;
 
     @BeforeAll
-    void setUp() {
+    static void setUp() {
         stockmarket = mock(IStockmarketService.class);
 
         when(stockmarket.lookUpPrice("AAPL")).thenReturn(150.0);
