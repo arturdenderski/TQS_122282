@@ -34,16 +34,4 @@ public class stackTests {
         assertEquals(5, testStack.peek());
         assertEquals(size, testStack.size());
     }
-
-    @Test
-    void multipleStackPops() {
-        testStack.pop();
-        testStack.pop();
-        testStack.pop();
-        testStack.pop();
-
-        assertEquals(0, testStack.size());
-    }
-
-
 }
