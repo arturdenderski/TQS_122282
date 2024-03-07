@@ -17,16 +17,6 @@ class WebDriverApplicationTests {
 
     private WebDriver driver;
 
-    @BeforeAll
-    static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-    }
-
-    @BeforeEach
-    void setup() {
-        driver = new ChromeDriver();
-    }
-
     @Test
     void test(ChromeDriver driver) {
         // Exercise
@@ -35,11 +25,7 @@ class WebDriverApplicationTests {
         String title = driver.getTitle();
 
         // Verify
-        assertThat(title).isEqualTo("YouTube");    }
-
-    @AfterEach
-    void teardown() {
-        driver.quit();
+        assertThat(title).isEqualTo("YouTube");
     }
 
 }
