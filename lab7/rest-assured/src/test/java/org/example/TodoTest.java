@@ -35,7 +35,7 @@ public class TodoTest {
     public void testListAllTodosContainsIds198And199() {
         when()
                 .get("/todos")
-        then()
+        .then()
                 .statusCode(200)
                 .body("id", hasItems(198, 199));
     }
@@ -44,7 +44,7 @@ public class TodoTest {
     public void testListAllTodosInLessThan2Seconds() {
         when()
                 .get("/todos")
-        then()
+        .then()
                 .statusCode(200)
                 .time(lessThan(2000L));
     }
