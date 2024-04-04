@@ -16,39 +16,35 @@ public class TodoTest {
 
     @Test
     public void testTodosEndpointReturns200() {
-        given()
-                .when()
+        when()
                 .get("/todos")
-                .then()
+        .then()
                 .statusCode(200);
     }
 
     @Test
     public void testGetTodoByIdReturnsCorrectTitle() {
-        given()
-                .when()
+        when()
                 .get("/todos/4")
-                .then()
+        .then()
                 .statusCode(200)
                 .body("title", equalTo("et porro tempora"));
     }
 
     @Test
     public void testListAllTodosContainsIds198And199() {
-        given()
-                .when()
+        when()
                 .get("/todos")
-                .then()
+        then()
                 .statusCode(200)
                 .body("id", hasItems(198, 199));
     }
 
     @Test
     public void testListAllTodosInLessThan2Seconds() {
-        given()
-                .when()
+        when()
                 .get("/todos")
-                .then()
+        then()
                 .statusCode(200)
                 .time(lessThan(2000L));
     }
